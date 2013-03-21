@@ -49,7 +49,7 @@ edited by hand. But, you can use any editor you like instead.
 
 Install the required packages:
 
-    sudo apt-get install -y build-essential zlib1g-dev libyaml-dev libssl-dev libgdbm-dev libreadline-dev libncurses5-dev libffi-dev curl git-core openssh-server redis-server postfix checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev
+    sudo apt-get install -y build-essential zlib1g-dev libyaml-dev libssl-dev libgdbm-dev libreadline-dev libncurses5-dev libffi-dev curl git-core openssh-server redis-server postfix checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libicu-dev postgresql-server-dev-8.4
 
 Make sure you have the right version of Python installed.
 
@@ -186,6 +186,8 @@ Make sure to update username/password in config/database.yml.
     cd /home/git/gitlab
 
     sudo gem install charlock_holmes --version '0.6.9'
+    
+    sudo gem install pg -v '0.14.1'
 
     # For MySQL (note, the option says "without")
     sudo -u git -H bundle install --deployment --without development test postgres
